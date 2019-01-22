@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Log In";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Log In</h1>
+    <br>
+    <br>
+     <form action="/action_page.php">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password</label>
+            <input type="password" class="form-control" id="pwd">
+        </div>
+        <a asp-area="" asp-controller="Home" asp-action="Selection" class="btn btn-warning">Log In</a>
+    </form> 
+</div>
+
