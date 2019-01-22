@@ -3,9 +3,25 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Cheapest Delivery</h1>
+    <h1 style="color:white;" class="display-4">Cheapest Delivery</h1>
     <br>
     <br>
-     
+    <table style="width:100%">
+        <tr style="color:green;">
+            <td>Dominos</td>
+            <td>$13.99</td>
+        </tr>
+        <tr style="color:red;">
+            <td>Pizza Hut</td>
+            <td>$16.50</td>
+        </tr>
+        <tr style="color:red;">
+            <td>Papa John's</td>
+            <td>$18.00</td>
+        </tr>
+    </table>
+    <br>
+    <br>
     <a asp-area="" asp-controller="Home" asp-action="Confirmation" class="btn btn-warning">Confirm Order</a>
+    <a asp-area="" asp-controller="Home" asp-action="Cart" class="btn btn-warning">Back to Cart</a>
 </div>
