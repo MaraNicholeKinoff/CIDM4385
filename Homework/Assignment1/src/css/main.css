@@ -14,5 +14,17 @@ body, html {
     background-size: cover;
 }
 h1 {
-    color: rgb(231, 204, 46);
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: red;
+    background-color: red
+}
+
+h5 {
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: yellow;
+    background-color: yellow;
 }
