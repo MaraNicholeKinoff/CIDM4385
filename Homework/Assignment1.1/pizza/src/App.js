@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import ChPizza from './img/ChPizza.jpg';
+import PepPizza from './img/PepPizza.jpg';
+import HWPizza from './img/HWPizza.jpg';
+import VegPizza from './img/VegPizza.jpg';
 
 class App extends Component {
   render() {
@@ -16,7 +20,7 @@ class App extends Component {
             </label>
             <br></br>
             <label>
-              Password:    
+              CC #:    
               <input type="text"/>
             </label>
           </form>
@@ -25,7 +29,7 @@ class App extends Component {
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title">Cheese Pizza</h3>
-                  <img src="src/img/ChPizza.jpg" alt="Cheese Pizza" height="42" width="42"></img>
+                  <img src={ChPizza} height="100"></img>
                   <form class="cheese">
                     <label>
                       Quanitity:   
@@ -39,7 +43,7 @@ class App extends Component {
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title">Peperonni Pizzza</h3>
-                  <img src="src/img/PepPizza.jpg" alt="Pepperoni Pizza" height="42" width="42"></img>
+                  <img src={PepPizza} height="100"></img>
                   <form>
                     <label>
                       Quanitity:   
@@ -55,7 +59,7 @@ class App extends Component {
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title">Hawaiian Pizza</h3>
-                  <img src="src/img/HWPizza.jpg" alt="Hawaiian Pizza" height="42" width="42"></img>
+                  <img src={HWPizza} height="100"></img>
                   <form>
                     <label>
                       Quanitity:   
@@ -69,7 +73,7 @@ class App extends Component {
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title">Vegetarian Pizzza</h3>
-                  <img src="src/img/VegPizza.jpg" alt="Veggiie Pizza" height="42" width="42"></img>
+                  <img src={VegPizza} height="100"></img>
                   <form>
                     <label>
                       Quanitity:   
