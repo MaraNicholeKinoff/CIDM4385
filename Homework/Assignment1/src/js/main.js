@@ -1,5 +1,4 @@
 ReactDOM.render(
-    <h1>Hello, world!</h1>,
-    document.getElementById('root')
-  );
-  
+    React.createElement("h1", {}, "Hello World"),
+    document.getElementById("root")
+    );
