@@ -14,5 +14,5 @@ ReactDOM.render(
             "Create Profile"
         )
     ),
-    document.getElementById("top_header")
+    document.getElementById("root")
     );
