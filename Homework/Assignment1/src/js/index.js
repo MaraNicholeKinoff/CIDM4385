@@ -14,5 +14,5 @@ ReactDOM.render(
             "Create Profile"
         )
     ),
-    document.getElementById("root")
+    document.getElementById("index")
     );
