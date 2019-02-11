@@ -6,4 +6,5 @@ This is the repository for code that is written for Mobile Application Developme
 
     - Homework: This folder will contain the homework assignments for this class
     - InClass: This folder will contain the code examples shown in class.
+        - These folders are sorted by the date they were created in class.
 
