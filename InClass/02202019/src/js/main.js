@@ -1,4 +1,5 @@
 var root = document.getElementById("root");
+var form = document.getElementById("form");
 
 var Email = () => {
     return React.createElement("input", { className: 'form-control-md input-group text-center', placeholder: 'Email' });
@@ -11,7 +12,7 @@ var Email = () => {
   var SubmitButton = () => {
     return React.createElement("button", { style: { float: 'right' } }, "Submit")
   };
-  
+
   var Form = () => {
       return React.createElement('form', {}, [
         React.createElement(Email),
