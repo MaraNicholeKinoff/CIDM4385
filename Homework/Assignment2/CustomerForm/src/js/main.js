@@ -1,4 +1,4 @@
-var root = document.getElementById("root");
+var root = document.getElementById('root');
 
 var Email = () => {
   return React.createElement("input", { className: 'form-control-md input-group text-center', placeholder: 'Email' });
