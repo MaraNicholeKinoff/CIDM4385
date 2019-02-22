@@ -4,7 +4,13 @@ import './Form.css';
 class Form extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = { email: '', 
+                     password: '',
+                     formErrors: {email: '', password: ''},
+                     emailValid: false,
+                     passwordValid: false,
+                     formValid: false
+                  };
   
       this.handleChange = this.handleEmailChange.bind(this);
       this.handleChange = this.handlePasswordChange.bind(this);
@@ -12,15 +18,15 @@ class Form extends React.Component {
     }
   
     handleEmailChange(event) {
-      this.setState({value: event.target.value});
+      this.setState({email: event.target.email});
     }
 
     handlePasswordChange(event) {
-        this.setState({value: event.target.value});
+        this.setState({password: event.target.password});
       }
   
     handleSubmit(event) {
-      alert('An email and password was submitted.');
+      alert('An email and password were submitted.');
       event.preventDefault();
     }
   

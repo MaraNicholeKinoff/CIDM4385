@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Form from './Form';
+import Submitted from './Submitted';
 import * as serviceWorker from './serviceWorker';
+import Submitted from './Submitted';
 
 ReactDOM.render(<Form />, document.getElementById('root'));
 
