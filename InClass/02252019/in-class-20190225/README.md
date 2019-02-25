@@ -6,7 +6,7 @@
     Create a new directory to place today's work
     run: npx create-react-app in-class-20190225
     Import other items
-        cd pizza-bandit
+        cd in-class-20190225
         npm install --save bootstrap
         npm install --save jquery
         npm install --save popper.js
@@ -48,8 +48,6 @@
     Create a Map element with appropriate Layer and Feature children
     Obtain position using Geolocation
     Update map in the ReactJS componentDidMount lifecycle method
-
-
 
 ## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
