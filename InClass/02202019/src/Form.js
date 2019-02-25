@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import './Form.css';
 
 class Form extends React.Component {
@@ -18,11 +19,11 @@ class Form extends React.Component {
     }
   
     handleEmailChange(event) {
-      this.setState({email: event.target.email});
+      this.setState({email: event.target.value});
     }
 
     handlePasswordChange(event) {
-        this.setState({password: event.target.password});
+        this.setState({password: event.target.value});
       }
   
     handleSubmit(event) {
