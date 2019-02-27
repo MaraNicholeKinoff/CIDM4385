@@ -2,19 +2,42 @@ import React, { Component } from 'react';
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          
-        </header>
-        <body>
+class App extends React.Component {
 
-        </body>
-      </div>
-    );
+  //constructor
+  constructor(props){
+      super(props);
+
+      this.state = {
+          formresults: ''
+      }
+
+      this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
+
+  handleFormSubmit(results){
+
+      const formresults = results;
+      
+      this.setState( () => {
+              return {
+                  formresults
+              };
+          }
+      );
+  }
+
+  render() {
+      return (
+          <div className="container">
+              <LoginForm onFormSubmit={this.handleFormSubmit} />
+              <div>
+                  {this.state.formresults}
+              </div>
+          </div>
+      );
+  };
 }
 
-export default App;
+var root = document.getElementById('root');
+ReactDOM.render(<App />, root);

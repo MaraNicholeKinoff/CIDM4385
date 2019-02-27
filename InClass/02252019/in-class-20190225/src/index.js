@@ -6,6 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'jquery/dist/jquery';
+import 'popper.js';
+import 'mapbox-gl';
+import 'react-mapbox-gl';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
