@@ -40,6 +40,10 @@ class App extends Component {
   handleFormSubmission(formdata){}
 
   render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
+    }
+
     const { lng, lat, mapstyle} = this.state;
 
     return (
@@ -56,6 +60,7 @@ class App extends Component {
         </Map>
         <div>
         {/* FIXME: SHOW RESULTS FROM FORM HERE */}
+          
         </div>
       </div>
     );
