@@ -14,6 +14,7 @@ class LoginForm extends Component {
         }
 
         this.onEmailChange = this.onEmailChange.bind(this);
+        this.onPasswordChange = this.onPasswordChange.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 

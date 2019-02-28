@@ -40,12 +40,11 @@ class App extends Component {
   handleFormSubmission(formdata){}
 
   render() {
-    const { lng, lat, zoom, mapstyle} = this.state;
+    const { lng, lat, mapstyle} = this.state;
 
     return (
       <div className="container">
-        <LoginForm onFormSubmit={this.handleFormSubmission} />
-        <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
+        <LoginForm onFormSubmit={this.handleFormSubmission}/>
         <Map style={`mapbox://styles/mapbox/${mapstyle}-v9`}
           center={[lng, lat]} 
           containerStyle={{ height: "400px", width: "100%" }}>
@@ -55,6 +54,9 @@ class App extends Component {
             <Feature coordinates={[lng, lat]}/>
           </Layer>
         </Map>
+        <div>
+        {/* FIXME: SHOW RESULTS FROM FORM HERE */}
+        </div>
       </div>
     );
   }
