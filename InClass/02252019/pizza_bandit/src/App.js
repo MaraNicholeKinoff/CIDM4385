@@ -15,6 +15,7 @@ class App extends Component {
       lng: -98.5795,
       lat: 39.828175,
       zoom: 2,
+      mapstyle: "basic",
     };
 
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
@@ -39,13 +40,15 @@ class App extends Component {
   handleFormSubmission(formdata){}
 
   render() {
-    const { lng, lat, zoom} = this.state;
+    const { lng, lat, zoom, mapstyle} = this.state;
 
     return (
       <div className="container">
         <LoginForm onFormSubmit={this.handleFormSubmission} />
         <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
-        <Map center={[lng, lat]} containerStyle={{ height: "400px", width: "100%" }}>
+        <Map style={`mapbox://styles/mapbox/${mapstyle}-v9`}
+          center={[lng, lat]} 
+          containerStyle={{ height: "400px", width: "100%" }}>
           <Layer type="symbol"
             id="marker"
             layout={{ "icon-image": "marker-15"}}>
