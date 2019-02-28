@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class EmailInput extends Component {
 
-    //constructor
     constructor(props){
         super(props);
 
@@ -16,7 +15,6 @@ class EmailInput extends Component {
     onEmailChange(event) {
         var email = event.target.value;
 
-        //this is lifting the state value to the parent
         this.props.onEmailInputChange(email);
 
         this.setState( () => {
@@ -30,7 +28,6 @@ class EmailInput extends Component {
     render() {
         return (
             <div className="form-group">
-                <p>Test message: {this.props.test}</p>
                 <label htmlFor="exampleInputEmail1">Email address</label>
                 <input 
                     aria-describedby="emailHelp" 

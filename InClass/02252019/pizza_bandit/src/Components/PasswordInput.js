@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 
 class PasswordInput extends Component {
 
-    //constructor
     constructor(props){
         super(props);
 
-        //state
         this.state = {
             password: ''
         }
 
-        //even handlers
         this.onPasswordChange = this.onPasswordChange.bind(this);        
 
     }
@@ -19,6 +16,12 @@ class PasswordInput extends Component {
     onPasswordChange(event){
         const password = event.target.value;
 
+        this.setState( () => {
+                return {
+                    password
+                }
+            }
+        );
     }
 
     render() {

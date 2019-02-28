@@ -18,7 +18,6 @@ class App extends Component {
     };
 
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
-    this.randomizeMapStyle = this.randomizeMapStyle.bind(this);
   }
 
   componentDidMount(){

@@ -10,54 +10,58 @@ class LoginForm extends Component {
 
         this.state = {
             email: '',
-            results: '',
+            password: '',
         }
 
         this.onEmailChange = this.onEmailChange.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
-
     }
 
     //handler for data from child component
     onEmailChange(email){
-        
-        console.log("From the child: " + email);
-
         this.setState( () => {
                 return {
                     email
                 };
             }
         );
-
-        console.log("From the parent state: " + this.state.email);
     }
 
-    onFormSubmit(event){
-
-        event.preventDefault();
-
-        const results = "Email address is: " + this.state.email;
-
+    //handler for data from child component
+    onPasswordChange(password){
         this.setState( () => {
                 return {
-                    results
+                    password
                 };
             }
         );
+    }
 
-        //this is also lifting state to the parent
-        this.props.onFormSubmit(results);
+    onFormSubmit(event){
+        event.preventDefault();
 
+        const email = "Email address is: " + this.state.email;
+        const password = "Pasword is: " + this.state.password;
+
+        this.setState( () => {
+                return {email};
+            }
+        );
+        this.props.onFormSubmit(email);
+
+        this.setState( () => {
+            return {password};
+            }
+        );
+        this.props.onFormSubmit(password);
     }
 
     render() {
         return (
             <div>
                 <form onSubmit={this.onFormSubmit}>
-                    <EmailInput onEmailInputChange={this.onEmailChange} 
-                                test="dubs" />
-                    <PasswordInput />
+                    <EmailInput onEmailInputChange={this.onEmailChange}/>
+                    <PasswordInput onPasswordChange={this.onPasswordChange}/>
                     <button type="submit" 
                             className="btn btn-primary">Submit</button>
                 </form>
